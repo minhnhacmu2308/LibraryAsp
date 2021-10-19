@@ -128,9 +128,13 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AuthenticationController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ModulesController.cs" />
+    <Compile Include="Controllers\PublisherController.cs" />
     <Compile Include="Dao\AuthenticationDao.cs" />
+    <Compile Include="Dao\CategoryDao.cs" />
+    <Compile Include="Dao\PublisherDao.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -203,6 +207,8 @@
     <Content Include="Views\Modules\Footer.cshtml" />
     <Content Include="Views\Modules\Menu.cshtml" />
     <Content Include="Views\Authentication\Login.cshtml" />
+    <Content Include="Views\Publisher\Index.cshtml" />
+    <Content Include="Views\Category\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
