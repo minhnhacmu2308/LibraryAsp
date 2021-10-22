@@ -168,3 +168,4 @@ D:\.NET MVC\LibraryAsp\LibraryAsp\obj\Debug\LibraryAsp.csproj.CoreCompileInputs.
 D:\.NET MVC\LibraryAsp\LibraryAsp\obj\Debug\LibraryAsp.csproj.CopyComplete
 D:\.NET MVC\LibraryAsp\LibraryAsp\obj\Debug\LibraryAsp.dll
 D:\.NET MVC\LibraryAsp\LibraryAsp\obj\Debug\LibraryAsp.pdb
+D:\dđ\LibraryAsp\LibraryAsp\obj\Debug\LibraryAsp.Migrations.a.resources

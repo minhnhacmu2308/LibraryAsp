@@ -128,19 +128,27 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AuthenticationController.cs" />
+    <Compile Include="Controllers\BorrowBookController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ModulesController.cs" />
     <Compile Include="Controllers\PublisherController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Dao\AuthenticationDao.cs" />
+    <Compile Include="Dao\BookDao.cs" />
     <Compile Include="Dao\CategoryDao.cs" />
     <Compile Include="Dao\PublisherDao.cs" />
+    <Compile Include="Dao\TransactionDao.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202110181451323_createdatabase.cs" />
     <Compile Include="Migrations\202110181451323_createdatabase.designer.cs">
       <DependentUpon>202110181451323_createdatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110210855275_a.cs" />
+    <Compile Include="Migrations\202110210855275_a.designer.cs">
+      <DependentUpon>202110210855275_a.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Book.cs" />
@@ -163,6 +171,11 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\styles.css" />
+    <Content Include="Content\images\book-1.jpg" />
+    <Content Include="Content\images\book-2.jpg" />
+    <Content Include="Content\images\book-3.jpg" />
+    <Content Include="Content\images\book-4.jpg" />
+    <Content Include="Content\images\book-6.jpg" />
     <Content Include="Content\js\bootstrap.min.js" />
     <Content Include="Content\js\datatables-simple-demo.js" />
     <Content Include="Content\js\jquery-3.2.1.slim.min.js" />
@@ -209,6 +222,12 @@
     <Content Include="Views\Authentication\Login.cshtml" />
     <Content Include="Views\Publisher\Index.cshtml" />
     <Content Include="Views\Category\Index.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\Edit.cshtml" />
+    <Content Include="Views\User\UpdatePassword.cshtml" />
+    <Content Include="Views\BorrowBook\Index.cshtml" />
+    <Content Include="Views\BorrowBook\ListTransactionBorrow.cshtml" />
+    <Content Include="Views\BorrowBook\ListTransactionPunish.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -229,6 +248,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202110181451323_createdatabase.resx">
       <DependentUpon>202110181451323_createdatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110210855275_a.resx">
+      <DependentUpon>202110210855275_a.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

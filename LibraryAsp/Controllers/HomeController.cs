@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LibraryAsp.Dao;
+using LibraryAsp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,15 +10,19 @@ namespace LibraryAsp.Controllers
 {
     public class HomeController : Controller
     {
+
+        AuthenticationDao authenticationDao = new AuthenticationDao();
         public ActionResult Index()
         {
-            var user = Session["USER"];
+            User user = (User)Session["USER"];
             if (user == null)
             {
                 return RedirectToAction("Login", "Authentication");
             }
             else
             {
+                var list = authenticationDao.getInformationByUserName(user.email);
+                ViewBag.list = list;
                 return View();
             }
         }
@@ -24,7 +30,6 @@ namespace LibraryAsp.Controllers
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
-
             return View();
         }
 

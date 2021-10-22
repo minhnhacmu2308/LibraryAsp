@@ -1,6 +1,7 @@
 ﻿
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <main>
@@ -31,15 +32,16 @@
                                     <input type="text" class="form-control" id="dienvien" value="Nam" name="sdt" tabindex="2" readonly required>
                                 </div>
                             }
+
                         </div>
                         <div class="row">
                             <div class="col-6">
                                 <label for="category-film" class="col-form-label">Số điện thoại :</label>
-                                <input type="text" class="form-control" id="dienvien" value="@ViewBag.list.phone" name="sdt" tabindex="2" readonly  required>
+                                <input type="text" class="form-control" id="dienvien" value="@ViewBag.list.phone" name="sdt" tabindex="2" readonly required>
                             </div>
                             <div class="col-6">
                                 <label for="category-film" class="col-form-label">Địa chỉ<span style="color:red">* </span>:</label>
-                                <input type="text" class="form-control" id="tenphim" name="hoten" value="@ViewBag.list.address" tabindex="1" readonly  required maxlength="20">
+                                <input type="text" class="form-control" id="tenphim" name="hoten" value="@ViewBag.list.address" tabindex="1" readonly required maxlength="20">
                             </div>
                         </div>
                         <div class="row">
@@ -48,7 +50,7 @@
                                 <input type="text" class="form-control" id="tenphim" name="email" tabindex="1" value="@ViewBag.list.email" readonly required maxlength="20">
                             </div>
                             @{
-                            string dateS = String.Format("{0:yyyy-MM-dd}", @ViewBag.list.birthday);
+                                string dateS = String.Format("{0:yyyy-MM-dd}", @ViewBag.list.birthday);
                             }
                             <div class="col-6">
                                 <label for="category-film" class="col-form-label">Ngày sinh :</label>
@@ -56,10 +58,11 @@
                             </div>
 
                         </div>
-                      
+
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </main>
+
