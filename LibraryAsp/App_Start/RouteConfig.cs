@@ -12,7 +12,11 @@ namespace LibraryAsp
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
+            routes.MapRoute(
+               name: "handle",
+               url: "change-status/{id}/{status}",
+               defaults: new { controller = "BorrowBook", action = "changeStatus" }
+           );
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

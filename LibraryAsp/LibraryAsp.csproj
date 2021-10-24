@@ -128,19 +128,28 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AuthenticationController.cs" />
+    <Compile Include="Controllers\BookController.cs" />
+    <Compile Include="Controllers\BorrowBookController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ModulesController.cs" />
     <Compile Include="Controllers\PublisherController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Dao\AuthenticationDao.cs" />
+    <Compile Include="Dao\BookDao.cs" />
     <Compile Include="Dao\CategoryDao.cs" />
     <Compile Include="Dao\PublisherDao.cs" />
+    <Compile Include="Dao\TransactionDao.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202110181451323_createdatabase.cs" />
     <Compile Include="Migrations\202110181451323_createdatabase.designer.cs">
       <DependentUpon>202110181451323_createdatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110210939264_ff.cs" />
+    <Compile Include="Migrations\202110210939264_ff.designer.cs">
+      <DependentUpon>202110210939264_ff.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Book.cs" />
@@ -209,6 +218,15 @@
     <Content Include="Views\Authentication\Login.cshtml" />
     <Content Include="Views\Publisher\Index.cshtml" />
     <Content Include="Views\Category\Index.cshtml" />
+    <Content Include="Views\Book\Index.cshtml" />
+    <Content Include="Views\BorrowBook\Index.cshtml" />
+    <Content Include="Views\BorrowBook\ListTransactionBorrow.cshtml" />
+    <Content Include="Views\BorrowBook\ListTransactionPunish.cshtml" />
+    <Content Include="Views\User\Edit.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\UpdatePassword.cshtml" />
+    <Content Include="Views\BorrowBook\ListTransaction.cshtml" />
+    <Content Include="Views\User\ListUser.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -229,6 +247,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202110181451323_createdatabase.resx">
       <DependentUpon>202110181451323_createdatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110210939264_ff.resx">
+      <DependentUpon>202110210939264_ff.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

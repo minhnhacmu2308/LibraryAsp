@@ -12,7 +12,7 @@ namespace LibraryAsp.Models
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int id_role { get; set; }
+        public int id_transaction { get; set; }
 
         public int id_user { get; set; }
 
