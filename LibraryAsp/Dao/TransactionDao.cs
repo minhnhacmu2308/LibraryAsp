@@ -17,7 +17,7 @@ namespace LibraryAsp.Dao
 
         public Transaction checkExistTransaction(int userId, int bookId)
         {
-            return myDb.transactions.Where(t => t.id_user == userId && t.id_book == bookId).FirstOrDefault();
+            return myDb.transactions.Where(t => t.id_user == userId && t.id_book == bookId && t.status != 3 ).FirstOrDefault();
         }
 
         public List<Transaction> getTransactionBorrow(int userId)

@@ -30,7 +30,11 @@ namespace LibraryAsp.Controllers
             {
                 var userInformation = authenticationDao.getInformationByUserName(email);
                 Session.Add("USER", userInformation);
-                return RedirectToAction("Index", "Home");
+                if(userInformation.id_role == 2)
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+                return RedirectToAction("Index", "BorrowBook");
             }
             else
             {
